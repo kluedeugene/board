@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 public class ThymeLeafTest {
-	@RequestMapping("/")
+	//@RequestMapping("/")
 	public String index() {
 		return "index";
 	}

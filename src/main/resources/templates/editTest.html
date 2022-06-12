@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<p>I am CR<b>U</b>D machine</p>
+	<form method="post" action="/repository" th:object="${formModel}">
+		<input type="hidden" name="id" placeholder="id" th:value="*{id}"/>
+		<input type="text" name="name" placeholder="name" th:value="*{name}"/>
+		<input type="text" name="memo" placeholder="memo" th:value="*{memo}"/>
+		<input type="submit"/>
+	</form>
+	<form method="post" action="/delete">
+		<input type="hidden" name="id" placeholder="id" th:value="*{id}"/>
+		<input type="submit" value="delete">
+	</form>
+	<pre th:each="obj : ${data}">
+		<p th:text="|id : ${obj.id}, name: ${obj.name} memo:${obj.memo}|"></p>
+	</pre>
+</body>  
+</html>

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AddOperater {
-    @RequestMapping("/add/{a}/{b}")
+  //  @RequestMapping("/add/{a}/{b}")
     public int addOperater (
         @PathVariable int a
         , @PathVariable int b){
